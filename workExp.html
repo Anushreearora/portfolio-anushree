@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Anushree's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                    <span>Anushree</span>
+                </div>
+                <div class="links">
+                    <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="index.html">About</a></div>
+                    <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="">Work Experience</a></div>
+                    <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="projects.html">Projects</a></div>
+                    <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="blog.html">Blog</a></div>
+                    <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="contactMe.html">Contact Me</a></div>
+                </div>
+                <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+            </div>
+            <div class="dropdown">
+                <div class="links">
+                    <a href="index.html">About</a>
+                    <a href="">Work Experience</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contactMe.html">Contact Me</a>
+                    <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+                </div>
+            </div>
+        </nav> 
+    </header>
+    <main>
+        <section id="about">
+                <div class="timeline">
+                    <div class="container top-container">
+                        <div class="textbox">
+                            <h2>Fibronostics</h2>
+                            <small>Sept 2024 - Present</small>
+                            <ul>
+                                <li>Automated the order lifecycle using API services to provide real-time visibility on lead times and inventory levels with auto-replenishment capabilities. </li>
+                                <li>Achieved a 5x reduction in shipping costs through improved order planning and optimization.</li>
+                                <li>Built dashboards to track KPIs and monitor operations and sales performance</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="container bottom-container">
+                        <div class="textbox">
+                            <h2>Monetize</h2>
+                            <small>May 2024 - Aug 2024</small>
+                            <ul>
+                                <li>Built a MVP of a voice-enabled AI Copilot using the capabilities of AWS Transcribe, GPT-3.5 for an e-commerce AI assistant.</li>
+                                <li>Implemented NLP and NLU using intent and entity recognition techniques.</li>
+                                <li>Managed the database using PostgreSQL, vector databases, and LangChain.</li>
+                                <li>Deployed the solution using AWS Services (S3, Lambda, Transcribe, DynamoDB).</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="container top-container">
+                        <div class="textbox">
+                            <h2>Bolloré Logistics</h2>
+                            <small>May 2023 - Aug 2023</small>
+                            <ul>
+                                <li>Conducted time series forecasting using machine learning models like ARIMA, ETS, XGBoost and Prophet on operational data from the Warehouse Management System to dynamically predict manpower allocation for quality assurance checks.</li>
+                                <li>Developed a POC of an automated label reader using Optical Character Recognition techniques to reduce manual data entry operations at the warehouse and improve data accuracy.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init({offset:0});
+        </script>
+        <script>  
+            function hamburg(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(0px)"
+            }
+            function cancel(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(-500px)"
+            }
+        </script>
+    </main>
+</body>
+</html>
