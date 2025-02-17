@@ -269,26 +269,6 @@ section{
         width: 80%;
         margin-bottom: 0px;
     }
-    .timeline{
-       margin: 50px auto; 
-    }
-    .timeline::after{
-        left: 31px;
-    }
-    .container{
-        width: 100%;
-        padding-left: 80px;
-        padding-right: 25px;
-    }
-    .textbox{
-        font-size: 13px;
-    }
-    .textbox small{
-        margin-bottom: 10px;
-    }
-    .right-container{
-        left:0;
-    }
 }
 .skills-section {
     width: 35%;
