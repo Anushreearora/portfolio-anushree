@@ -7,6 +7,8 @@
     <title>Anushree's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+          
 </head>
 <body>
     <header>
@@ -37,45 +39,83 @@
         </nav> 
     </header>
     <main>
-        <section id="about">
-                <div class="timeline">
-                    <div class="container top-container">
-                        <div class="textbox">
-                            <h2>Fibronostics</h2>
-                            <small>Sept 2024 - Present</small>
-                            <ul>
-                                <li>Automated the order lifecycle using API services to provide real-time visibility on lead times and inventory levels with auto-replenishment capabilities. </li>
-                                <li>Achieved a 5x reduction in shipping costs through improved order planning and optimization.</li>
-                                <li>Built dashboards to track KPIs and monitor operations and sales performance</li>
-                            </ul>
+        <section id="workExp">
+                <div class="main-container">
+                    <div class="skills-section">
+                        <div class="skills-grid">
+                            <div class="skill-card"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+                            <div class="skill-card"><i class="devicon-html5-plain colored"></i><span>HTML</span></div>
+                            <div class="skill-card"><i class="devicon-css3-plain colored"></i><span>CSS</span></div>
+                            <div class="skill-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+                            <div class="skill-card"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></div>
+                            <div class="skill-card"><i class="devicon-flask-original"></i><span>Flask</span></div>
+                            <div class="skill-card"><i class="devicon-react-original colored"></i><span>React</span></div>
+                            <div class="skill-card"><i class="devicon-nextjs-original-wordmark"></i></i><span>Next.js</span></div>
+                            <div class="skill-card"><i class="devicon-tailwindcss-original colored"></i><span>Tailwind</span></div>
+                            <div class="skill-card"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></div>
+                            <div class="skill-card"><i class="devicon-amazonwebservices-plain-wordmark colored"></i><span>AWS</span></div>
+                            <div class="skill-card"><i class="devicon-git-plain colored"></i><span>Git</span></div>
                         </div>
                     </div>
-                    <div class="container bottom-container">
-                        <div class="textbox">
-                            <h2>Monetize</h2>
-                            <small>May 2024 - Aug 2024</small>
-                            <ul>
-                                <li>Built a MVP of a voice-enabled AI Copilot using the capabilities of AWS Transcribe, GPT-3.5 for an e-commerce AI assistant.</li>
-                                <li>Implemented NLP and NLU using intent and entity recognition techniques.</li>
-                                <li>Managed the database using PostgreSQL, vector databases, and LangChain.</li>
-                                <li>Deployed the solution using AWS Services (S3, Lambda, Transcribe, DynamoDB).</li>
-
-                            </ul>
+                    <div class="tab-bx">
+                        <!-- Tab Buttons (Left Side) -->
+                        <div class="tab-btn-bx">
+                            <button class="tab-btn active" onclick="showTab(0)">Fibronostics</button>
+                            <button class="tab-btn" onclick="showTab(1)">Monetize</button>
+                            <button class="tab-btn" onclick="showTab(2)">Bolloré Logistics</button>
                         </div>
-                    </div>
-                    <div class="container top-container">
-                        <div class="textbox">
-                            <h2>Bolloré Logistics</h2>
-                            <small>May 2023 - Aug 2023</small>
-                            <ul>
-                                <li>Conducted time series forecasting using machine learning models like ARIMA, ETS, XGBoost and Prophet on operational data from the Warehouse Management System to dynamically predict manpower allocation for quality assurance checks.</li>
-                                <li>Developed a POC of an automated label reader using Optical Character Recognition techniques to reduce manual data entry operations at the warehouse and improve data accuracy.</li>
-                            </ul>
+                    
+                        <!-- Tab Content (Right Side) -->
+                        <div class="tab-ctn-bx">
+                            <div class="tab-ctn active">
+                                <h3>Business and Systems Analyst Intern @ <span>Fibronostics</span></h3>
+                                <small>Sept 2024 - Present</small>
+                                <ul>
+                                    <li>Automated the order lifecycle using API services to provide real-time visibility on lead times and inventory levels with auto-replenishment capabilities.</li>
+                                    <li>Achieved a 5x reduction in shipping costs through improved order planning and optimization.</li>
+                                    <li>Built dashboards to track KPIs and monitor operations and sales performance.</li>
+                                </ul>
+                            </div>
+                    
+                            <div class="tab-ctn">
+                                <h3>Software and AI Intern @ <span>Monetize</span></h3>
+                                <small>May 2024 - Aug 2024</small>
+                                <ul>
+                                    <li>Built an MVP of a voice-enabled AI Copilot using AWS Transcribe and GPT-3.5 for an e-commerce AI assistant.</li>
+                                    <li>Implemented NLP and NLU using intent and entity recognition techniques.</li>
+                                    <li>Managed the database using PostgreSQL, vector databases, and LangChain.</li>
+                                    <li>Deployed the solution using AWS Services (S3, Lambda, Transcribe, DynamoDB).</li>
+                                </ul>
+                            </div>
+                    
+                            <div class="tab-ctn">
+                                <h3>Data Intern @ <span>Bolloré Logistics</span></h3>
+                                <small>May 2023 - Aug 2023</small>
+                                <ul>
+                                    <li>Conducted time series forecasting using machine learning models like ARIMA, ETS, XGBoost, and Prophet on operational data.</li>
+                                    <li>Developed a POC of an automated label reader using OCR techniques to reduce manual data entry operations.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
         </section>
-
+        <script>
+            function showTab(index) {
+                let tabs = document.querySelectorAll(".tab-ctn");
+                let buttons = document.querySelectorAll(".tab-btn");
+        
+                tabs.forEach((tab, i) => {
+                    if (i === index) {
+                        tab.classList.add("active");
+                        buttons[i].classList.add("active");
+                    } else {
+                        tab.classList.remove("active");
+                        buttons[i].classList.remove("active");
+                    }
+                });
+            }
+        </script>        
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
           AOS.init({offset:0});

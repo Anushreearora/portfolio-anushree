@@ -13,7 +13,7 @@ body{
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
-    background: linear-gradient(to right, rgb(255,255,255), rgb(254,215,173));
+    background: rgb(13,23,41);
 }
 nav{
     width: 100%;
@@ -33,8 +33,8 @@ nav{
     font-weight: bolder;
 }
 .logo span{
-    color: rgb(109,67, 0);
-    text-shadow: 0 0 10px rgb(109,67, 0);
+    color: rgb(65,204,176);
+    text-shadow: 0 0 10px rgb(65,204,176);
 }
 .hamburg, .cancel{
     cursor: pointer;
@@ -53,7 +53,7 @@ nav{
 .nav-container .links a{
     position: relative;
     font-size: 1.2rem;
-    color: black;
+    color: rgb(65,204,176);
     text-decoration: none;
     font-weight: 500;
     transform: 0.3s linear;
@@ -65,7 +65,7 @@ nav{
     left: 0;
     width: 0%;
     height: 3px;
-    background-color: rgb(109,67, 0);
+    background-color: rgb(65,204,176);
     transition: 0.2s linear;
 }
 .nav-container .links a:hover::before{
@@ -75,7 +75,7 @@ nav{
     background-color: transparent;
     padding: 5px 20px;
     border-radius: 20px;
-    border: 2px solid rgb(109,67, 0);
+    border: 2px solid rgb(65,204,176);
     transition: 0.2s linear;
 }
 .nav-container .contact-btn a{
@@ -83,11 +83,11 @@ nav{
     transition: 0.3s linear;
 }
 .nav-container .contact-btn:hover, .nav-container .contact-btn:hover a{
-    background-color: rgb(109,67, 0);
+    background-color: rgb(65,204,176);
     color: white;
 }
 .nav-container .links a:hover{
-    color: rgb(109,67, 0);
+    color: rgb(65,204,176);
 }
 .dropdown{
     z-index: 100;
@@ -110,7 +110,7 @@ nav{
     transition: 0.2s linear;
 }
 .dropdown .links a:hover{
-    background-color: rgb(109,67, 0);
+    background-color: rgb(65,204,176);
 }
 section{
     width: 100%;
@@ -139,7 +139,7 @@ section{
     object-fit: cover; /* Ensures image fills the circular area without distortion */
 }
 .main-container .content{
-    color: black;
+    color: white;
     width: 40%;
     min-height: 100px;
 }
@@ -147,17 +147,17 @@ section{
     font-size: clamp(1rem, 2rem + 5vw, 3rem);
 }
 .content h1 span{
-    color: rgb(109,67, 0);
-    text-shadow: 0 0 10px rgb(109,67, 0);
+    color: rgb(65,204,176);
+    text-shadow: 0 0 10px rgb(65,204,176);
 }
 .content .typewriter{
     font-weight: 600;
     font-size: clamp(1rem, 1rem + 5vw, 2rem);
 }
 .content .typewriter span{
-    color: rgb(109,67, 0);
+    color: rgb(65,204,176);
     font-size: 2.5rem;
-    text-shadow: 0 0 5px rgb(109,67, 0);
+    text-shadow: 0 0 5px rgb(65,204,176);
     position: relative;
     transition: 0.3s linear;
 }
@@ -200,9 +200,9 @@ section{
     width: 3rem;
     height: 3rem;
     background-color:transparent;
-    border: 0.2rem solid rgb(109,67, 0);
+    border: 0.2rem solid rgb(65,204,176);
     border-radius: 50%;
-    color:rgb(109,67, 0);
+    color:rgb(65,204,176);
     margin: 5px 10px;
     font-size: 1.5rem;
     transition: 0.2s linear;
@@ -210,14 +210,14 @@ section{
 .social-links i:hover{
     scale: 1.3;
     color: white;
-    background-color: rgb(109,67, 0);
+    background-color: rgb(65,204,176);
     filter: drop-shadow(0 0 10px rgb(109,67,0));
 }
 .content button{
     width: 40%;
     height: 6vh;
     margin: 30px;
-    background-color: rgb(109,67, 0);
+    background-color: rgb(65,204,176);
     color: white;
     border: none;
     outline: none;
@@ -228,11 +228,11 @@ section{
 }
 .content button:hover{
  scale: 1.1;
- color: rgb(109,67, 0);
- border: 2px solid rgb(109,67, 0);
+ color: rgb(65,204,176);
+ border: 2px solid rgb(65,204,176);
  background-color: transparent;
  font-weight: 700;
- box-shadow: 0 0 40px rgb(109,67, 0);
+ box-shadow: 0 0 40px rgb(65,204,176);
 }
 @media screen and (max-width:600px) {
     body{
@@ -290,81 +290,142 @@ section{
         left:0;
     }
 }
-.timeline{
-    position: relative;
-    width: 100%;
+.skills-section {
+    width: 35%;
+    padding: 20px;
+    height: 400px;
+}
+
+.skills-grid {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers items */
+    align-items: center;
+    gap: 15px; /* Space between icons */
+    max-width: 500px; /* Set a width so it doesn't stretch full screen */
+    margin: auto; /* Centers the cloud in the section */
+}
+
+.skill-card {
+    width: 90px; /* Adjust width */
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05); /* Slight translucent background */
+    padding: 10px;
+}
+
+.skill-card i {
+    font-size: 40px;
+}
+
+.skill-card span {
+    font-size: 14px;
+    color: white;
+}
+/* Overall container */
+.tab-bx {
+    display: flex;
+    position: relative;
+    width: 900px;
+    height: 400px;
+    background: #0f172a; /* Dark background */
+    color: white;
+    border-radius: 10px;
+}
+
+/* Left side: Tab buttons */
+.tab-btn-bx {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/* Individual tab buttons */
+.tab-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    font-size: 14px;
+    text-align: left;
+    transition: all 0.3s;
+    border-left: 5px solid transparent;
+}
+
+/* Highlight active tab */
+.tab-btn.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgb(65,204,176);
+    font-weight: bold;
+    border-left: 5px solid rgb(65,204,176);
+}
+
+/* Right side: Tab content */
+.tab-ctn-bx {
+    width: 70%;
+    height: 100%;
+    padding: 30px;
+}
+
+/* Individual content sections */
+.tab-ctn {
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Show active content */
+.tab-ctn.active {
+    display: block;
+}
+
+.tab-ctn h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px; /* Space below headings */
+}
+
+.tab-ctn small {
+    display: block;
+    margin-bottom: 15px; /* Space below the date */
+    color: rgba(255, 255, 255, 0.7); /* Slightly faded */
+}
+.tab-ctn span{
+    color: rgb(65, 204, 176);
+}
+
+.tab-ctn ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tab-ctn li {
+    line-height: 1.8; /* Increases spacing between bullet points */
+    margin-bottom: 20px; /* Adds spacing between list items */
+    display: flex;
     align-items: center;
 }
-.container{
-    min-height: 350px;
-    width: 30%;
-    flex: 1;
-    padding: 20px;
-    margin: 10px;
-    position: relative;
-    animation: movedown 1s linear forwards;
-    opacity: 0;
-}
-@keyframes movedown {
-    0%{
-        opacity: 1;
-        transform: translateY(-30px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0);
-    }
 
-}
-.container:nth-child(1){
-    animation-delay: 1s;
-}
-.container:nth-child(2){
-    animation-delay: 2s;
-}
-.container:nth-child(3){
-    animation-delay: 3s;
+.tab-ctn li::before {
+    content: "▹"; /* Custom arrow bullet */
+    color: rgb(65,204,176);
+    margin-right: 8px;
+    font-size: 16px;
 }
 
-.top-container{
-    margin-bottom: 400px;
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
-.bottom-container{
-    margin-top: 400px;
-}
-.textbox{
-    min-width: 470px;
-    min-height: 330px;
-    padding: 20px 30px;
-    background-color: #fff;
-    position: relative;
-    border-radius: 6px;
-    font-size: 15px;
-}
-.timeline::after{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 6px; /* Horizontal line thickness */
-    background-color: #fff;
-    top: 50%; /* Center it vertically within the timeline */
-    left: 0;
-    z-index: -1;
-    animation: moveline 3.5s linear forwards;
-}
-
-@keyframes moveline{
-    0%{
-        width: 0;
-    }
-    100%{
-        width: 100;
-    }
-}
-.textbox small{
-    display: inline-block;
-}
- 
