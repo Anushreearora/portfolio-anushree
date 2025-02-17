@@ -180,13 +180,13 @@ section{
 }
 @keyframes words {
     0%, 33%{
-        content: "Developer";
-    }
-    34%, 66%{
         content: "Business Analyst";
     }
-    67%, 100%{
+    34%, 66%{
         content: "Data Analyst";
+    }
+    67%, 100%{
+        content: "Full-Stack Developer";
     }
 }
 .content p{
