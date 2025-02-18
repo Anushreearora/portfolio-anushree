@@ -444,7 +444,7 @@ section{
     box-shadow: 0px 0px 10px rgba(65,204,176, 0.5);
 }
 
-@media screen and (max-width:852px) {
+@media screen and (max-width: 900px){
     body{
         overflow-y: visible;
     }
