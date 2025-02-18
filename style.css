@@ -444,7 +444,7 @@ section{
     box-shadow: 0px 0px 10px rgba(65,204,176, 0.5);
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:852px) {
     body{
         overflow-y: visible;
     }
@@ -458,7 +458,6 @@ section{
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 50px;
     }
     .nav-container .links{
         display: none;
@@ -484,7 +483,7 @@ section{
     .tab-bx {
         flex-direction: column;
         width: 100%;
-        height: fit-content;
+        height: auto;
     }
 
     .tab-btn-bx {
