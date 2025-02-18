@@ -458,7 +458,6 @@ section{
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 20px;
     }
     .nav-container .links{
         display: none;
@@ -484,7 +483,7 @@ section{
     .tab-bx {
         flex-direction: column;
         width: 100%;
-        height: auto;
+        height: fit-content;
     }
 
     .tab-btn-bx {
