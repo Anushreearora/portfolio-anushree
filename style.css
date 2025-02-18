@@ -503,23 +503,6 @@ section{
     object-fit: cover;
 }
 
-.btn {
-    background: rgb(65,204,176);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: all 0.3s ease-in-out;
-}
-
-.btn:hover {
-    background: transparent;
-    border: 2px solid rgb(65,204,176);
-    color: rgb(65,204,176);
-    box-shadow: 0px 0px 10px rgba(65,204,176, 0.5);
-}
 
 @media screen and (max-width: 900px){
     body{
