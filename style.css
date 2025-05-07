@@ -474,7 +474,6 @@ section{
     justify-items: center;
     max-width: 1200px;
     margin: auto;
-    align-items: stretch;
 }
 
 .project-card {
@@ -490,7 +489,7 @@ section{
     min-height: 550px; /* Ensure consistent height */
     transition: transform 0.3s ease;
     padding: 20px;
-    height: 100%;
+
 }
 
 .project-card:hover {
@@ -523,15 +522,6 @@ section{
     text-align: center;
     margin-bottom: 10px;
     position: relative;
-}
-
-.project-content h2::after {
-    content: "";
-    display: block;
-    width: 40px;
-    height: 2px;
-    background: rgb(65,204,176);
-    margin: 10px auto 0 auto;
 }
 
 .btn-container {
