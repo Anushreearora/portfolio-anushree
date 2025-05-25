@@ -163,33 +163,41 @@ section{
     position: relative;
     transition: 0.3s linear;
 }
-.typewriter span::before{
-    content: "Developer";
-    animation: words 15s infinite;
+.typewriter {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 600;
+    font-size: clamp(1rem, 1rem + 5vw, 2rem);
 }
-.typewriter span::after{
-    content: "";
-    position: absolute;
-    width: calc(100% + 8px);
-    height: 100%;
-    border-left: 3px solid black;
-    animation:  cursor 0.6s linear infinite;
+
+#typed-text {
+    font-weight: 600;
+    color: rgb(65,204,176);
+    text-shadow: 0 0 5px rgb(65,204,176);
+    font-size: inherit;
+    line-height: 1.2;
+    display: inline-block;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blinkCursor 0.75s step-end infinite;
 }
-@keyframes cursor {
-    to{
-        border-left: 3px solid #b74b4b;
-    }
+
+.typewriter span {
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: blinkCursor 0.75s step-end infinite;
+    font-size: 2rem;
+    color: rgb(65,204,176);
+    text-shadow: 0 0 5px rgb(65,204,176);
 }
-@keyframes words {
-    0%, 33%{
-        content: "Business Analyst";
-    }
-    34%, 66%{
-        content: "Data Analyst";
-    }
-    67%, 100%{
-        content: "Full-Stack Developer";
-    }
+
+@keyframes blinkCursor {
+    from { border-right-color: rgba(255, 255, 255, 0.75); }
+    to { border-right-color: transparent; }
 }
 .content p{
     font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);

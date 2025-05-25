@@ -42,7 +42,7 @@
                 </div>
                 <div class="content">
                     <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Hey I'm <span>Anushree</span></h1>
-                    <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">I'm a <span></span></div>
+                    <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">I'm a <span id="typed-text"></span></div>
                     <p data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">Graduate of Computer Science and Business from NTU, Singapore. <br><br> Passionate about problem-solving, crafting intuitive, user-focused tech solutions that make a meaningful impact on the digital and physical world.</p>
                     <div class="social-and-cv">
                         <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
@@ -70,6 +70,37 @@
                 const navbar = document.querySelector(".dropdown")
                 navbar.style.transform = "translateY(-500px)"
             }
+        </script>
+        <script>
+            const roles = ["Business Analyst", "Data Analyst", "Full-Stack Developer"];
+            const typedText = document.getElementById("typed-text");
+            let currentRole = 0;
+            let charIndex = 0;
+
+            function type() {
+                if (charIndex < roles[currentRole].length) {
+                    typedText.textContent += roles[currentRole].charAt(charIndex);
+                    charIndex++;
+                    setTimeout(type, 100);
+                } else {
+                    setTimeout(erase, 2000);
+                }
+            }
+
+            function erase() {
+                if (charIndex > 0) {
+                    typedText.textContent = roles[currentRole].substring(0, charIndex - 1);
+                    charIndex--;
+                    setTimeout(erase, 50);
+                } else {
+                    currentRole = (currentRole + 1) % roles.length;
+                    setTimeout(type, 500);
+                }
+            }
+
+            document.addEventListener("DOMContentLoaded", function() {
+                if (roles.length) type();
+            });
         </script>
     </main>
 </body>
