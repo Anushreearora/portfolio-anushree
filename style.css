@@ -678,3 +678,28 @@ section{
         width: 90%;
     }
 }
+
+.desktop-type {
+    display: inline;
+}
+
+/* Static fallback hidden by default */
+.mobile-type {
+    display: none;
+}
+
+/* On mobile, disable animation and show static version */
+@media screen and (max-width: 768px) {
+    .desktop-type {
+        display: none !important;
+    }
+
+    .mobile-type {
+        display: inline;
+        color: rgb(65,204,176);
+        font-weight: 600;
+        text-shadow: 0 0 5px rgb(65,204,176);
+        font-size: inherit;
+        line-height: 1.2;
+    }
+}
