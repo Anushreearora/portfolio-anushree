@@ -184,7 +184,7 @@ section{
     animation: blinkCursor 0.75s step-end infinite;
 }
 
-.typewriter span {
+/* .typewriter span {
     border-right: 2px solid rgba(255, 255, 255, 0.75);
     white-space: nowrap;
     overflow: hidden;
@@ -193,7 +193,7 @@ section{
     font-size: 2rem;
     color: rgb(65,204,176);
     text-shadow: 0 0 5px rgb(65,204,176);
-}
+} */
 
 @keyframes blinkCursor {
     from { border-right-color: rgba(255, 255, 255, 0.75); }
@@ -679,27 +679,3 @@ section{
     }
 }
 
-.desktop-type {
-    display: inline;
-}
-
-/* Static fallback hidden by default */
-.mobile-type {
-    display: none;
-}
-
-/* On mobile, disable animation and show static version */
-@media screen and (max-width: 768px) {
-    .desktop-type {
-        display: none !important;
-    }
-
-    .mobile-type {
-        display: inline;
-        color: rgb(65,204,176);
-        font-weight: 600;
-        text-shadow: 0 0 5px rgb(65,204,176);
-        font-size: inherit;
-        line-height: 1.2;
-    }
-}
